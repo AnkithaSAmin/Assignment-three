@@ -12,6 +12,7 @@ echo "Numbers are: <br>";
     echo "$x <br>";
     $x++;
  }
+echo "<br>";
 echo "Even Numbers are: <br>";
 for ($x=1; $x<=10; $x++)
 {
