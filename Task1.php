@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-    
-    <body>
+<head>
+    <title>Task1</title>
+</head>
+<body>
 <?php
+ 
 $x=1;
 echo "Numbers are: <br>";
  while($x<=10) {
