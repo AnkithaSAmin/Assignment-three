@@ -15,9 +15,9 @@
             Message: <textarea name="message" row="5" cols="30"></textarea>
             <br><br>
             Gender: 
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="other">Other
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Other">Other
             <br><br>
             <input type="submit" name="submit" value="Submit"> 
         </form>
