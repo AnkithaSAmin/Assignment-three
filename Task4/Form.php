@@ -8,7 +8,7 @@
 <body>  
 
 <?php
-// define variables and set to empty values
+
 $nameErr = $emailErr = $genderErr = $phoneErr = "";
 $name = $email = $gender = $comment = $phone = "";
 
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emailErr = "Email is required";
   } else {
     $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
+    
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
     }
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = "";
   } else {
     $phone = test_input($_POST["phone"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    
     if (!preg_match('/^[0-9]{10}+$/',$phone)) {
       $phoneErr = "Invalid phone number";
     }
