@@ -3,7 +3,7 @@
 $sName = "localhost";
 $uName = "ankitha";
 $pass = "ankitha28";
-$db_name = "ankitha_auth_db1";
+$db_name = "ankitha_auth_db6";
 
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name", 

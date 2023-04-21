@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
  ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
     	<div class="shadow w-350 p-3 text-center">
     		<img src="upload/<?=$_SESSION['pp']?>"
     		     class="img-fluid rounded-circle">
-            <h3 class="display-4 "><?=$_SESSION['fname']?></h3>
+            <h3 class="display-4 "><?=$_SESSION['username']?></h3>
             <a href="logout.php" class="btn btn-warning">
             	Logout
             </a>

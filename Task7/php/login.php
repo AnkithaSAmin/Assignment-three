@@ -30,14 +30,15 @@ if(isset($_POST['uname']) &&
 
           $username =  $user['username'];
           $password =  $user['password'];
-          $fname =  $user['fname'];
+          $email =  $user['email'];
           $id =  $user['id'];
           $pp =  $user['pp'];
 
           if($username === $uname){
              if(password_verify($pass, $password)){
                  $_SESSION['id'] = $id;
-                 $_SESSION['fname'] = $fname;
+                 $_SESSION['username'] = $username;
+                 $_SESSION['email'] = $email;
                  $_SESSION['pp'] = $pp;
 
                  header("Location: ../home.php");

@@ -28,19 +28,19 @@
 			</div>
 		    <?php } ?>
 		  <div class="mb-3">
-		    <label class="form-label">Full Name</label>
-		    <input type="text" 
-		           class="form-control"
-		           name="fname"
-		           value="<?php echo (isset($_GET['fname']))?$_GET['fname']:"" ?>">
-		  </div>
-
-		  <div class="mb-3">
 		    <label class="form-label">User name</label>
 		    <input type="text" 
 		           class="form-control"
 		           name="uname"
 		           value="<?php echo (isset($_GET['uname']))?$_GET['uname']:"" ?>">
+		  </div>
+
+		  <div class="mb-3">
+		    <label class="form-label">Email</label>
+		    <input type="text" 
+		           class="form-control"
+		           name="email"
+		           value="<?php echo (isset($_GET['email']))?$_GET['email']:"" ?>">
 		  </div>
 
 		  <div class="mb-3">

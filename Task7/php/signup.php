@@ -1,23 +1,23 @@
 <?php 
 
-if(isset($_POST['fname']) && 
-   isset($_POST['uname']) &&  
+if(isset($_POST['uname']) && 
+   isset($_POST['email']) &&  
    isset($_POST['pass'])){
 
     include "../db_conn.php";
 
-    $fname = $_POST['fname'];
     $uname = $_POST['uname'];
+    $email = $_POST['email'];
     $pass = $_POST['pass'];
 
-    $data = "fname=".$fname."&uname=".$uname;
+    $data = "uname=".$uname."&email=".$email;
     
-    if (empty($fname)) {
-    	$em = "Full name is required";
+    if (empty($uname)) {
+    	$em = "User name is required";
     	header("Location: ../index.php?error=$em&$data");
 	    exit;
-    }else if(empty($uname)){
-    	$em = "User name is required";
+    }else if(empty($email)){
+    	$em = "Email  is required";
     	header("Location: ../index.php?error=$em&$data");
 	    exit;
     }else if(empty($pass)){
@@ -46,10 +46,10 @@ if(isset($_POST['fname']) &&
                move_uploaded_file($tmp_name, $img_upload_path);
 
                // Insert into Database
-               $sql = "INSERT INTO users(fname, username, password, pp) 
+               $sql = "INSERT INTO users(useranme, email, password, pp) 
                  VALUES(?,?,?,?)";
                $stmt = $conn->prepare($sql);
-               $stmt->execute([$fname, $uname, $pass, $new_img_name]);
+               $stmt->execute([$uname, $email, $pass, $new_img_name]);
 
                header("Location: ../index.php?success=Your account has been created successfully");
                 exit;
@@ -66,10 +66,10 @@ if(isset($_POST['fname']) &&
 
         
       }else {
-       	$sql = "INSERT INTO users(fname, username, password) 
+       	$sql = "INSERT INTO users(username, email, password) 
        	        VALUES(?,?,?)";
        	$stmt = $conn->prepare($sql);
-       	$stmt->execute([$fname, $uname, $pass]);
+       	$stmt->execute([$uname, $email, $pass]);
 
        	header("Location: ../index.php?success=Your account has been created successfully");
    	    exit;
